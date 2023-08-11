@@ -1,29 +1,16 @@
-import { Experience } from './components';
-import { getData } from "./utils/getData";
-import { useState, useEffect } from "react";
+/* eslint-disable no-empty-pattern */
+import Experience from './components/Experience.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 const App = ({ }) => {
 
-  const [experience, setExperience] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchArticles = async () => {
-      await getData({ setExperience });
-      setIsLoading(false);
-    };
-    fetchArticles();
-  }, []);
-
-  if (isLoading) {
-    return <p>Loading...</p>
-  }
 
   return (
     <Router>
       <Routes>
-        <Route path='/profile' element={<Experience experience={experience} />} />
+        <Route path='/' element={<Experience />} />
+        <Route path='/profile' element={<Experience />} />
       </Routes>
     </Router>
   )
