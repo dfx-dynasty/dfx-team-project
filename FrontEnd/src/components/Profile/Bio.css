@@ -1,14 +1,24 @@
 * {
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 
-.profile-images-container {
+#bio-card {
     position: relative;
-    display: inline-block;
-    top: -6em;
+}
+
+.profile-wrapper {
+    position: relative;
+    padding-top: 6rem;
+    margin: 0 3rem;
 }
 
 .picture-and-links {
+    width: 15.5rem;
+    margin-right: 2.5rem;
+}
+
+.profile-images-container {
     position: relative;
 }
 
@@ -16,25 +26,29 @@
     width: 12rem;
     height: 12rem;
     border-radius: 9999px;
-    border: solid 4px #ffffff;
-    position: relative;
-    /* top: -6em; */
+    border: solid 3px #ffffff;
 }
 
 #nationality {
     position: absolute;
-    bottom: 0;
+    bottom: -0.25rem;
     left: 50%;
-    transform: translateX(-45%);
+    transform: translateX(-50%);
     width: 2.2rem;
     height: auto;
-
 }
 
 .bio-banner {
-    position: relative;
+    position: absolute;
     height: 11.25rem;
-    margin: 4px;
+    margin: 0.25rem;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.bio-details {
+    margin-top: 6.5rem;
 }
 
 #banner-image {
@@ -42,7 +56,6 @@
     height: 100%;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
-    position: absolute;
 }
 
 #overview {
@@ -50,17 +63,14 @@
     border-radius: 8px;
 }
 
-.links {
-    margin-left: 4%;
-    margin-top: 14%;
-    bottom: 0;
-    position: absolute;
-
+.linkIcon {
+    border: 2px solid rgba(0, 100, 220, 1);
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
-.linkIcon {
-    margin-right: 9%;
-    border: 2px solid rgba(0, 100, 220, 1);
-    padding: 5px 10px 5px 10px;
-    border-radius: 15px;
+.linkIcon:hover {
+    background-color: rgba(0, 100, 220, 1);
+    color: rgba(255, 255, 255, 1);
 }
