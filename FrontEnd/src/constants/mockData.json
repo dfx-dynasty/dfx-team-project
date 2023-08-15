@@ -1,0 +1,235 @@
+{
+    "response": {
+        "user_type": "graduate",
+        "name": {
+            "firstname": "John",
+            "lastname": "Doe"
+        },
+        "bio": {
+            "headshot": "https://ds.static.rtbf.be/article/image/1920x1080/1/5/e/4e5046fc8d6a97d18a5f54beaed54dea-1681747291.jpg",
+            "nationality": "British",
+            "pronouns": "he/him",
+            "headline": "Software Engineer - Maths Graduate - Python Programmer - Full Stack Dev - Speaks Spanish",
+            "overview": "Lorem ipsum etc etc etc blah blah blah....",
+            "socials": {
+                "youtube": "https://youtu.be/WIx4srqU3BE",
+                "github": "https://github.com/dfx-dynasty",
+                "linkedin": "https://www.linkedin.com/company/digital-futures2021/mycompany/"
+            }
+        },
+        "experience": [
+            {
+                "employer_name": "Google",
+                "position": "actor",
+                "employer_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png",
+                "start_date": "15/11/2020",
+                "end_date": "01/05/2023",
+                "description": "blah blah blah"
+            },
+            {
+                "employer_name": "Facebook",
+                "position": "director",
+                "employer_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png",
+                "start_date": "15/11/2020",
+                "end_date": "01/05/2023",
+                "description": "blah blah blah"
+            },
+            {
+                "employer_name": "X",
+                "position": "chef",
+                "employer_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png",
+                "start_date": "15/11/2020",
+                "end_date": "01/05/2023",
+                "description": "blah blah blah"
+            }
+        ],
+        "training_progress": [
+            {
+                "fundamentals": {
+                    "name": "Fundamentals",
+                    "challenges": [
+                        {
+                            "name": "Test-driven development",
+                            "result": "Pass"
+                        },
+                        {
+                            "name": "Agile",
+                            "result": "Pass"
+                        }
+                    ]
+                }
+            },
+            {
+                "Software_development_1": {
+                    "name": "Software Development 1",
+                    "challenges": [
+                        {
+                            "name": "Bank Challenge",
+                            "result": "Pass"
+                        },
+                        {
+                            "name": "Airport Challenge",
+                            "result": "Pass"
+                        }
+                    ]
+                }
+            },
+            {
+                "best_practice": {
+                    "name": "Best Practice",
+                    "challenges": [
+                        {
+                            "name": "Data ethics assignment",
+                            "result": "Pass"
+                        },
+                        {
+                            "name": "Python Challenges",
+                            "result": "Pass"
+                        }
+                    ]
+                }
+            },
+            {
+                "web_fundamentals": {
+                    "name": "Web Fundamentals",
+                    "challenges": [
+                        {
+                            "name": "Responsive Web Design",
+                            "result": "Pass"
+                        },
+                        {
+                            "name": "HTML Elements",
+                            "result": "Pass"
+                        }
+                    ]
+                }
+            }
+        ],
+        "feedback": [
+            {
+                "name": "Jane Doe",
+                "position": "Trainer",
+                "description": "I bet my bottom dollar Mr Doe will be your best engineer.",
+                "feedback_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            },
+            {
+                "name": "Jane Doe",
+                "position": "Trainer",
+                "description": "It has been a pleasure teaching Mr Doe.",
+                "feedback_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            },
+            {
+                "name": "Jane Doe",
+                "position": "Trainer",
+                "description": "This student cannot code to save his life.",
+                "feedback_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            }
+        ],
+        "personality_type": {
+            "personality_id": "ESTP-A",
+            "personality_src": "https://s3.amazonaws.com/thumbnails.venngage.com/template/d6290a51-5a77-4840-acb5-313a37d2b9a5.png"
+        },
+        "certifications": [
+            {
+                "name": "Agile Explorer",
+                "certification_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            },
+            {
+                "name": "Java Explorer",
+                "certification_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            },
+            {
+                "name": "Awesome Explorer",
+                "certification_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            },
+            {
+                "name": "Cave Explorer",
+                "certification_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            }
+        ],
+        "qualifications": [
+            {
+                "name": "Cave exploration",
+                "type": "Bachelors",
+                "establishment": "Cambridge University",
+                "qualification_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            },
+            {
+                "name": "Interpretive Dance",
+                "type": "Bachelors",
+                "establishment": "Oxford University",
+                "qualification_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            },
+            {
+                "name": "Computer Science",
+                "type": "A-level",
+                "establishment": "School of Ed",
+                "qualification_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            },
+            {
+                "name": "Floral Design",
+                "type": "Bachelors",
+                "establishment": "Harvard University",
+                "qualification_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            }
+        ],
+        "diligence_checks": [
+            {
+                "name": "Disclosure",
+                "status": "complete"
+            },
+            {
+                "name": "Identity",
+                "status": "incomplete"
+            },
+            {
+                "name": "Credit",
+                "status": "complete"
+            },
+            {
+                "name": "Right to Work",
+                "status": "complete"
+            },
+            {
+                "name": "Education",
+                "status": "complete"
+            }
+        ],
+        "interests": [
+            {
+                "name": "Thailand",
+                "type": "travel"
+            },
+            {
+                "name": "Poodle",
+                "type": "animal"
+            },
+            {
+                "name": "Bluey",
+                "type": "tv"
+            },
+            {
+                "name": "Hiking",
+                "type": "sports"
+            }
+        ],
+        "key_tools": [
+            {
+                "name": "Javascript",
+                "tool_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            },
+            {
+                "name": "Java",
+                "tool_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            },
+            {
+                "name": "React",
+                "tool_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            },
+            {
+                "name": "Express",
+                "tool_img": "https://www.pngkit.com/png/detail/580-5805804_pitbull-artist-png-svg-library-pitbull-mr-worldwide.png"
+            }
+        ]
+    }
+}
