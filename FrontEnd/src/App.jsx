@@ -1,15 +1,13 @@
 /* eslint-disable no-empty-pattern */
 import Profile from "./components/Profile/Profile.jsx";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-const App = ({}) => {
+const App = ({ }) => {
   return (
-    <Router>
-      <Routes>
-        {/* <Route path='/' element={<placeholder />} /> */}
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
-    </Router>
+    <Routes>
+      {/* <Route path='/' element={<placeholder />} /> */}
+      <Route path="/profile" element={<Profile />} />
+    </Routes>
   );
 };
 export default App;
