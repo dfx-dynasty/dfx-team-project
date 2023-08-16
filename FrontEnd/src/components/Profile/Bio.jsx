@@ -2,7 +2,7 @@ import './Bio.css';
 
 const Bio = () => {
   return (
-    <div id="bio-card" className='m-3'>
+    <div id="bio-card">
       <div className="bio-banner">
         <img id="banner-image" src={"https://imgs.search.brave.com/c9qsI2YF7ouCcvlQ2W7GFlPHWKROa5y3tvHf6bHoO0Y/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vRUFFTnZr/MkNTNE0vMS8wLzE2/MDB3L2NhbnZhLXNp/bXBsZS10ZWNobm9s/b2d5LWxpbmtlZGlu/LWJhbm5lci1pSHZt/LVltZFRjUS5qcGc"} alt="" />
       </div>
@@ -20,13 +20,13 @@ const Bio = () => {
         </div>
         <div className="bio-details">
           <div className='d-flex align-items-end mb-2'>
-            <h4 className="align-self-end me-3 mb-0">{"John Doe"}</h4>
-            <p className="align-self-end mb-0">{"(he/him)"}</p>
+            <h4 className="font-bold align-self-end me-2 mb-0">{"John Doe"}</h4>
+            <p className="p-light align-self-end mb-0">{"(he/him)"}</p>
           </div>
-          <p>{"Tagline"}</p>
+          <p className='p-light'>{"Tagline"}</p>
           <div id="overview" className='px-4 py-3'>
-            <h6>Overview</h6>
-            <p>{"Lorem, ipsum dolor sit amet consectetur adipisicing elit. At consequuntur enim voluptas voluptate ea, ullam sint, animi facere quo sit nulla dolorum voluptatibus iste quas facilis! Necessitatibus ipsa repudiandae enim."}</p>
+            <h6 className='font-bold'>Overview</h6>
+            <p className='p-light'>{"Lorem, ipsum dolor sit amet consectetur adipisicing elit. At consequuntur enim voluptas voluptate ea, ullam sint, animi facere quo sit nulla dolorum voluptatibus iste quas facilis! Necessitatibus ipsa repudiandae enim."}</p>
           </div>
         </div>
       </div>

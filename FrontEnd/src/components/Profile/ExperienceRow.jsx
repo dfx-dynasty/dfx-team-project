@@ -1,4 +1,4 @@
-import './ExperienceRow.css'
+import './Experience.css'
 
 export const ExperienceRow = () => {
     return (
@@ -13,11 +13,11 @@ export const ExperienceRow = () => {
                 <p className="font-bold mb-0">Software Engineer</p>
             </div>
             <div className="col-3">
-                Jan 22 - Mar 22
+                <p className='font-small p-light mb-0'>Jan 22 - Mar 22</p>
             </div>
             <div className="col-2 text-end">
                 <button className="btn btn-sm expand-btn font-bold">
-                    Expand <i className="fas fa-plus ml-1"></i>
+                    <span className="font-bold">Expand </span> <i className="fas fa-plus ml-1"></i>
                 </button>
             </div>
         </div>

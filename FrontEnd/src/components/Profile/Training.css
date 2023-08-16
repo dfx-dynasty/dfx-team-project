@@ -8,6 +8,10 @@
     font-weight: 700;
 }
 
+.desc-font-small {
+    font-size: .875rem;
+}
+
 .training-row {
     border: 1px solid #dee2e6;
     border-radius: 8px;

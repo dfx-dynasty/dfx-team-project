@@ -1,0 +1,60 @@
+#personality-card,
+#qualifications-card,
+#certifications-card,
+#diligence-check-card,
+#interests-card,
+#key-tools-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.p-light {
+    color: #57606E;
+}
+
+.widget-images {
+    width: 35px;
+    height: auto;
+}
+
+.widget-card {
+    background-color: rgb(240, 243, 248);
+    border-radius: 8px;
+    width: calc(50% - 2rem) !important;
+}
+
+.widget-icon,
+.personality-type,
+.view-all {
+    color: #0064dc;
+}
+
+.personality-image {
+    max-width: 150px;
+    height: auto;
+}
+
+.question-icon {
+    color: #d9d9d9;
+}
+
+.diligence-check {
+    color: #22C55E;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-small {
+    font-size: small;
+}
+
+.font-smallest {
+    font-size: x-small;
+}
+
+.desc-font-small {
+    font-size: .875rem;
+}
