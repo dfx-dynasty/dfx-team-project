@@ -1,0 +1,25 @@
+#training-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.training-row {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.learn-more-btn {
+    color: #0064DC !important;
+}
+
+.pass-badge {
+    background-color: #bbf7d0;
+    color: #22c55e;
+    border-radius: 9999px;
+    padding: 3px 10px;
+}

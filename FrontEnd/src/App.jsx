@@ -23,9 +23,9 @@ const App = ({ }) => {
     fetchUserData();
   }, []);
 
-  if (isLoading) {
-    return <p>Loading...</p>
-  }
+  // if (isLoading) {
+  //   return <p>Loading...</p>
+  // }
 
 
   return (

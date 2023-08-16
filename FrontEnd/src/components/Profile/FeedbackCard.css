@@ -1,0 +1,15 @@
+#feedback-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+img.feedback-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.feedback-row {
+    background-color: rgb(240, 243, 248);
+    border-radius: 8px;
+}
