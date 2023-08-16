@@ -9,23 +9,25 @@ const App = ({ }) => {
   const [userData, setUserData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    fetchUserData();
+  }, []);
 
   const fetchUserData = async () => {
     try {
-      await getData({ setUserData });
+      const response = await getData();
+      setUserData(response);
       setIsLoading(false);
     } catch (error) {
       return error;
     }
   };
 
-  useEffect(() => {
-    fetchUserData();
-  }, []);
 
-  // if (isLoading) {
-  //   return <p>Loading...</p>
-  // }
+
+  if (isLoading) {
+    return <p>Loading...</p>
+  }
 
 
   return (

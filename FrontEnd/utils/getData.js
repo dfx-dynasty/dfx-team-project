@@ -1,12 +1,10 @@
 import { getUserData } from "./dataService.js";
 
-export const getData = async ({ setUserData }) => {
+export const getData = async () => {
     const data = await getUserData();
     if (data?.error) {
-        console.log(data.error.message);
-        setUserData([]);
-        return;
+        return data.error.message;
     }
-    const { results } = data.response;
-    setUserData(results);
+    return data;
+
 }
