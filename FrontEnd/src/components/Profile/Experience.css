@@ -1,8 +1,22 @@
 #experience-card {
-    border: 1px solid #000000;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
     border-radius: 8px;
 }
 
+.font-bold {
+    font-weight: 700;
+}
+
 .employer-image {
-    width: 50px;
+    width: 40px;
+}
+
+.experience-row {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.expand-btn {
+    color: #0064DC !important;
 }

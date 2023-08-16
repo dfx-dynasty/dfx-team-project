@@ -2,7 +2,7 @@ import './Bio.css';
 
 const Bio = () => {
   return (
-    <div id="bio-card">
+    <div id="bio-card" className='m-3'>
       <div className="bio-banner">
         <img id="banner-image" src={"https://imgs.search.brave.com/c9qsI2YF7ouCcvlQ2W7GFlPHWKROa5y3tvHf6bHoO0Y/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vRUFFTnZr/MkNTNE0vMS8wLzE2/MDB3L2NhbnZhLXNp/bXBsZS10ZWNobm9s/b2d5LWxpbmtlZGlu/LWJhbm5lci1pSHZt/LVltZFRjUS5qcGc"} alt="" />
       </div>
