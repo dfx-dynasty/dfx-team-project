@@ -1,3 +1,4 @@
+import { Header } from "./Header.jsx";
 import Bio from "./Bio.jsx";
 import Experience from './Experience.jsx'
 import { Training } from "./Training.jsx";
@@ -12,29 +13,35 @@ import { KeyTools } from "./KeyTools.jsx";
 const Profile = ({ userData }) => {
   // Calls Bio, Experience, Feedback, Personality, Extras
   return (
-    <div className="m-3">
+    <>
       <div className="row">
         <div className="col">
-          <Bio />
+          <Header />
         </div>
       </div>
-      <div className="row">
-        <div className="col-8">
-          <Experience />
-          <Training />
-          <FeedbackCard />
+      <div className="m-3">
+        <div className="row">
+          <div className="col">
+            <Bio />
+          </div>
         </div>
-        <div className="col-4">
-          <PersonalityCard />
-          <Certifications />
-          <Qualifications />
-          <DiligenceChecks />
-          <Interests />
-          <KeyTools />
+        <div className="row">
+          <div className="col-8">
+            <Experience />
+            <Training />
+            <FeedbackCard />
+          </div>
+          <div className="col-4">
+            <PersonalityCard />
+            <Certifications />
+            <Qualifications />
+            <DiligenceChecks />
+            <Interests />
+            <KeyTools />
+          </div>
         </div>
       </div>
-    </div>
-
+    </>
   )
 
 };

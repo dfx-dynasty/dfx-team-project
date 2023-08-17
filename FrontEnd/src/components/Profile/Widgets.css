@@ -9,6 +9,10 @@
     border-radius: 8px;
 }
 
+#header {
+    background-color: #ffffff;
+}
+
 .p-light {
     color: #57606E;
 }
