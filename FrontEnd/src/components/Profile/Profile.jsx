@@ -1,6 +1,6 @@
 import { Header } from "./Header.jsx";
 import Bio from "./Bio.jsx";
-import Experience from './Experience.jsx'
+import Experience from "./Experience.jsx";
 import { Training } from "./Training.jsx";
 import { FeedbackCard } from "./FeedbackCard.jsx";
 import { PersonalityCard } from "./PersonalityCard.jsx";
@@ -9,20 +9,24 @@ import { Qualifications } from "./Qualifications.jsx";
 import { DiligenceChecks } from "./DiligenceChecks.jsx";
 import { Interests } from "./Interests.jsx";
 import { KeyTools } from "./KeyTools.jsx";
+import PropTypes from "prop-types";
 
 const Profile = ({ userData }) => {
   // Calls Bio, Experience, Feedback, Personality, Extras
+  const bioData = userData.bio;
+  const user = userData.name;
+
   return (
     <>
       <div className="row">
         <div className="col">
-          <Header />
+          <Header user={user} />
         </div>
       </div>
       <div className="m-3">
         <div className="row">
           <div className="col">
-            <Bio />
+            <Bio bioData={bioData} user={user} />
           </div>
         </div>
         <div className="row">
@@ -42,9 +46,15 @@ const Profile = ({ userData }) => {
         </div>
       </div>
     </>
-  )
-
+  );
 };
 
+Profile.defaultProps = {
+  userData: {},
+};
+
+Profile.propTypes = {
+  userData: PropTypes.object,
+};
 
 export default Profile;
