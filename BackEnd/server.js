@@ -1,6 +1,7 @@
 // Backend Entry Point
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -11,24 +12,22 @@ const PORT = 3001;
 
 import { getUserRoute } from "./routes/getUserData.route.js";
 
-
 //TODO: CONNECT TO DATABASE
 const MONGOLINK = "mongodb+srv://dfxdynasty:dfxpass@dfx.cas8rnf.mongodb.net/dfx";
 const databaseConnect = async () => {
-    console.log('connecting to mongo...')
-    await mongoose.connect(MONGOLINK);
-    console.log('connected to db')
-}
+  console.log("connecting to mongo...");
+  await mongoose.connect(MONGOLINK);
+  console.log("connected to db");
+};
 
-databaseConnect().catch(err => console.log(err));
+databaseConnect().catch((err) => console.log(err));
 
-
+app.use(cors());
 app.use(express.json());
-app.use('/getdata', getUserRoute);
-
+app.use("/getdata", getUserRoute);
 
 const SERVER = app.listen(PORT, () => {
-    console.log(`server running on localhost:${PORT}`)
-})
+  console.log(`server running on localhost:${PORT}`);
+});
 
 export default SERVER;
