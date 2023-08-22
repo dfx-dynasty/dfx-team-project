@@ -6,9 +6,11 @@
   "directories": {
     "test": "test"
   },
+  "type": "module",
   "scripts": {
     "test": "mocha",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git"
