@@ -3,7 +3,7 @@ import { useState } from "react";
 import { BioFormModal } from "./BioFormModal";
 import "./Bio.css";
 
-const Bio = ({ user: { firstname, lastname }, bioData: { headshot, nationality, pronouns, headline, overview, socials } }) => {
+const Bio = ({ bioData: { firstname, lastname, headshot, nationality, pronouns, headline, overview, socials } }) => {
   const fullName = `${firstname} ${lastname}`;
   const youtube = socials.youtube;
   const github = socials.github;
@@ -13,7 +13,7 @@ const Bio = ({ user: { firstname, lastname }, bioData: { headshot, nationality, 
 
   const handleProfileEditClick = () => {
     setIsModalOpen(!isModalOpen);
-  }
+  };
 
   return (
     <div id="bio-card">
@@ -55,10 +55,7 @@ const Bio = ({ user: { firstname, lastname }, bioData: { headshot, nationality, 
               <p className="p-light align-self-end mb-0">({pronouns})</p>
             </div>
             <i className="fa-solid fa-pen" onClick={handleProfileEditClick} />
-            <BioFormModal
-              isOpen={isModalOpen}
-              onClose={() => setIsModalOpen(false)}
-            />
+            <BioFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
           </div>
           <p className="p-light">{headline}</p>
           <div id="overview" className="px-4 py-3">
@@ -72,7 +69,6 @@ const Bio = ({ user: { firstname, lastname }, bioData: { headshot, nationality, 
 };
 
 Bio.propTypes = {
-  user: PropTypes.object,
   bioData: PropTypes.object,
 };
 export default Bio;

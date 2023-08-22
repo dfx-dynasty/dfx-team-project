@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import "./Widgets.css";
 
-export const Header = ({ user }) => {
+export const Header = ({ bioData }) => {
   const [dayTime, setDayTime] = useState("");
-  const firstname = user.firstname;
+  const firstname = bioData.firstname;
 
   useEffect(() => {
     const currentTime = new Date();
@@ -36,5 +36,5 @@ export const Header = ({ user }) => {
 };
 
 Header.propTypes = {
-  user: PropTypes.object,
+  bioData: PropTypes.object,
 };

@@ -14,19 +14,18 @@ import PropTypes from "prop-types";
 const Profile = ({ userData }) => {
   // Calls Bio, Experience, Feedback, Personality, Extras
   const bioData = userData.bio;
-  const user = userData.name;
 
   return (
     <>
       <div className="row">
         <div className="col">
-          <Header user={user} />
+          <Header user={bioData} />
         </div>
       </div>
       <div className="m-3">
         <div className="row">
           <div className="col">
-            <Bio bioData={bioData} user={user} />
+            <Bio bioData={bioData} />
           </div>
         </div>
         <div className="row">
