@@ -19,7 +19,7 @@ const Profile = ({ userData }) => {
     <>
       <div className="row">
         <div className="col">
-          <Header user={bioData} />
+          <Header bioData={bioData} />
         </div>
       </div>
       <div className="m-3">

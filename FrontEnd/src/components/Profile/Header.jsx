@@ -4,6 +4,7 @@ import "./Widgets.css";
 
 export const Header = ({ bioData }) => {
   const [dayTime, setDayTime] = useState("");
+
   const firstname = bioData.firstname;
 
   useEffect(() => {
