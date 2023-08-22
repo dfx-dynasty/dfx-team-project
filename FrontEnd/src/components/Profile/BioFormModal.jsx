@@ -1,20 +1,37 @@
 import { useState } from "react";
 import "./BioFormModal.css";
+import { putBioDataHandler } from "../../../utils/dataHandlers.js";
+// import 
 
-export const BioFormModal = ({ isOpen, onClose }) => {
+export const BioFormModal = ({ isOpen, onClose, Bio }) => {
   if (!isOpen) return null;
   //set the default formdata to retrieve current data
+
+  // const { socials } = Bio;
+
+  // console.log({ Bio });
+
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    imageUrl: "",
-    nationalityImageUrl: "",
-    pronouns: "",
-    headline: "",
-    tagline: "",
-    linkedinUrl: "",
-    githubUrl: "",
-    videoUrl: "",
+
+    _id: {
+      $oid: "64e492014bf1530e7e87f788"
+    },
+    user_type: "Graduate",
+    Bio: {
+      firstName: Bio.firstname,
+      lastName: "test",
+      headshot: Bio.headshot,
+      nationality: Bio.nationality,
+      pronouns: Bio.pronouns,
+      headline: Bio.headline,
+      overview: Bio.overview,
+      socials: {
+        linkedin: Bio.socials.linkedin,
+        github: Bio.socials.github,
+        youtube: Bio.socials.youtube,
+      }
+    }
+
   });
 
   const handleInputChange = (event) => {
@@ -28,8 +45,11 @@ export const BioFormModal = ({ isOpen, onClose }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     onClose();
-    //send form data to axios
-    window.location.reload(false);
+    console.log(formData);
+    putBioDataHandler(formData);
+
+
+    // window.location.reload(false);
   };
 
   return (
@@ -47,34 +67,34 @@ export const BioFormModal = ({ isOpen, onClose }) => {
                 <div className="d-flex">
                   <div className="me-5">
                     <div className="mb-2">
-                      <label htmlFor="imageUrl" className="form-label">
+                      <label htmlFor="headshot" className="form-label">
                         Profile Image URL:
                       </label>
-                      <input type="text" id="imageUrl" name="imageUrl" value={formData.imageUrl} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="headshot" name="headshot" value={formData.Bio.headshot} onChange={handleInputChange} className="form-control" />
                     </div>
                     <div className="mb-2">
-                      <label htmlFor="imageUrl" className="form-label">
+                      <label htmlFor="headshot" className="form-label">
                         Nationality Image URL
                       </label>
-                      <input type="text" id="nationalityImageUrl" name="nationalityImageUrl" value={formData.nationalityImageUrl} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="overview" name="overview" value={formData.Bio.overview} onChange={handleInputChange} className="form-control" />
                     </div>
                     <div className="mb-2">
-                      <label htmlFor="linkedinUrl" className="form-label">
+                      <label htmlFor="linkedin" className="form-label">
                         LinkedIn URL
                       </label>
-                      <input type="text" id="linkedinUrl" name="linkedinUrl" value={formData.linkedinUrl} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="linkedin" name="linkedin" value={formData.Bio.socials.linkedin} onChange={handleInputChange} className="form-control" />
                     </div>
                     <div className="mb-2">
-                      <label htmlFor="githubUrl" className="form-label">
+                      <label htmlFor="github" className="form-label">
                         GitHub URL
                       </label>
-                      <input type="text" id="githubUrl" name="githubUrl" value={formData.githubUrl} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="github" name="github" value={formData.Bio.socials.github} onChange={handleInputChange} className="form-control" />
                     </div>
                     <div className="mb-2">
-                      <label htmlFor="videoUrl" className="form-label">
+                      <label htmlFor="youtube" className="form-label">
                         Profile Video URL
                       </label>
-                      <input type="text" id="videoUrl" name="videoUrl" value={formData.videoUrl} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="youtube" name="youtube" value={formData.Bio.socials.youtube} onChange={handleInputChange} className="form-control" />
                     </div>
                   </div>
                   <div>
@@ -82,31 +102,31 @@ export const BioFormModal = ({ isOpen, onClose }) => {
                       <label htmlFor="firstName" className="form-label">
                         First Name*
                       </label>
-                      <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} className="form-control" required />
+                      <input type="text" id="firstName" name="firstName" value={formData.Bio.firstName} onChange={handleInputChange} className="form-control" required />
                     </div>
                     <div className="mb-2">
                       <label htmlFor="lastName" className="form-label">
                         Last Name*
                       </label>
-                      <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} className="form-control" required />
+                      <input type="text" id="lastName" name="lastName" value={formData.Bio.lastName} onChange={handleInputChange} className="form-control" required />
                     </div>
                     <div className="mb-2">
                       <label htmlFor="pronouns" className="form-label">
                         Pronouns
                       </label>
-                      <input type="text" id="pronouns" name="pronouns" value={formData.pronouns} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="pronouns" name="pronouns" value={formData.Bio.pronouns} onChange={handleInputChange} className="form-control" />
                     </div>
                     <div className="mb-2">
                       <label htmlFor="headline" className="form-label">
                         Profile Headline*
                       </label>
-                      <input type="text" id="headline" name="headline" value={formData.headline} onChange={handleInputChange} className="form-control" required />
+                      <input type="text" id="headline" name="headline" value={formData.Bio.headline} onChange={handleInputChange} className="form-control" required />
                     </div>
                     <div className="mb-2">
-                      <label htmlFor="tagline" className="form-label">
-                        Tagline
+                      <label htmlFor="overview" className="form-label">
+                        overview
                       </label>
-                      <input type="text" id="tagline" name="tagline" value={formData.tagline} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="overview" name="overview" value={formData.Bio.overview} onChange={handleInputChange} className="form-control" />
                     </div>
                   </div>
                 </div>

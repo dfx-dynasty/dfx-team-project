@@ -3,11 +3,28 @@ import { useState } from "react";
 import { BioFormModal } from "./BioFormModal";
 import "./Bio.css";
 
-const Bio = ({ bioData: { firstname, lastname, headshot, nationality, pronouns, headline, overview, socials } }) => {
-  const fullName = `${firstname} ${lastname}`;
-  const youtube = socials.youtube;
-  const github = socials.github;
-  const linkedin = socials.linkedin;
+const Bio = ({ bioData }) => {
+
+
+
+
+
+  const fullName = `${bioData.firstname} ${bioData.lastname}`;
+
+  const { socials } = bioData;
+
+  const youtube = bioData.socials.youtube;
+  const github = bioData.socials.github;
+  const linkedin = bioData.socials.linkedin;
+  const pronouns = bioData.pronouns;
+  const nationality = bioData.nationality;
+  const headshot = bioData.headshot;
+  const overview = bioData.overview;
+  const headline = bioData.headline;
+
+
+
+
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -55,7 +72,7 @@ const Bio = ({ bioData: { firstname, lastname, headshot, nationality, pronouns, 
               <p className="p-light align-self-end mb-0">({pronouns})</p>
             </div>
             <i className="fa-solid fa-pen" onClick={handleProfileEditClick} />
-            <BioFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            <BioFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} Bio={bioData} />
           </div>
           <p className="p-light">{headline}</p>
           <div id="overview" className="px-4 py-3">
@@ -69,6 +86,18 @@ const Bio = ({ bioData: { firstname, lastname, headshot, nationality, pronouns, 
 };
 
 Bio.propTypes = {
-  bioData: PropTypes.object,
+  Bio: PropTypes.shape({
+    _id: PropTypes.string,
+    firstname: PropTypes.string,
+    lastname: PropTypes.string,
+    headshot: PropTypes.string,
+    nationality: PropTypes.string,
+    pronouns: PropTypes.string,
+    socials: PropTypes.shape({
+      youtube: PropTypes.string,
+      github: PropTypes.string,
+      linkedin: PropTypes.string,
+    })
+  }),
 };
 export default Bio;
