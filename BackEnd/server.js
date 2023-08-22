@@ -13,7 +13,8 @@ import { getUserRoute } from "./routes/getUserData.route.js";
 import { updateBioRoute } from "./routes/updateBio.route.js";
 
 //TODO: CONNECT TO DATABASE
-const MONGOLINK = "mongodb+srv://dfxdynasty:dfxpass@dfx.cas8rnf.mongodb.net/dfx";
+const MONGOLINK = 'mongodb+srv://dfxdynasty:dfxpass@dfx.cas8rnf.mongodb.net/dfx'
+
 const databaseConnect = async () => {
   console.log("connecting to mongo...");
   await mongoose.connect(MONGOLINK);
@@ -25,7 +26,7 @@ databaseConnect().catch((err) => console.log(err));
 app.use(cors());
 app.use(express.json());
 app.use("/getdata", getUserRoute);
-app.use("/updatebio", updateBioRoute)
+app.use("/updatebio", updateBioRoute);
 
 const SERVER = app.listen(PORT, () => {
   console.log(`server running on localhost:${PORT}`);
