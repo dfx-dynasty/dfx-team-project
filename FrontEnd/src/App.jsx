@@ -1,11 +1,10 @@
 /* eslint-disable no-empty-pattern */
 import { useEffect, useState } from "react";
-import { getData } from "../utils/getData.js";
+import { getData } from "../utils/dataHandlers.js";
 import Profile from "./components/Profile/Profile.jsx";
 import { Route, Routes } from "react-router-dom";
 
-const App = ({ }) => {
-
+const App = ({}) => {
   const [userData, setUserData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -23,12 +22,9 @@ const App = ({ }) => {
     }
   };
 
-
-
   if (isLoading) {
-    return <p>Loading...</p>
+    return <p>Loading...</p>;
   }
-
 
   return (
     <Routes>
