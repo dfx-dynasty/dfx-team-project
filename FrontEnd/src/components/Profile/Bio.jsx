@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
+import { BioFormModal } from "./BioFormModal";
 import "./Bio.css";
 
 const Bio = ({ user: { firstname, lastname }, bioData: { headshot, nationality, pronouns, headline, overview, socials } }) => {
@@ -6,6 +8,12 @@ const Bio = ({ user: { firstname, lastname }, bioData: { headshot, nationality, 
   const youtube = socials.youtube;
   const github = socials.github;
   const linkedin = socials.linkedin;
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProfileEditClick = () => {
+    setIsModalOpen(!isModalOpen);
+  }
 
   return (
     <div id="bio-card">
@@ -41,9 +49,16 @@ const Bio = ({ user: { firstname, lastname }, bioData: { headshot, nationality, 
           </div>
         </div>
         <div className="bio-details">
-          <div className="d-flex align-items-end mb-2">
-            <h4 className="font-bold align-self-end me-2 mb-0">{fullName}</h4>
-            <p className="p-light align-self-end mb-0">({pronouns})</p>
+          <div className="d-flex justify-content-between">
+            <div className="d-flex align-items-end mb-2">
+              <h4 className="font-bold align-self-end me-2 mb-0">{fullName}</h4>
+              <p className="p-light align-self-end mb-0">({pronouns})</p>
+            </div>
+            <i className="fa-solid fa-pen" onClick={handleProfileEditClick} />
+            <BioFormModal
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+            />
           </div>
           <p className="p-light">{headline}</p>
           <div id="overview" className="px-4 py-3">
