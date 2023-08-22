@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = 3000;
+const PORT = 3001;
 
 //*Importing routes
 
@@ -13,7 +13,7 @@ import { getUserRoute } from "./routes/getUserData.route.js";
 
 
 //TODO: CONNECT TO DATABASE
-const MONGOLINK = "mongodb://127.0.0.1:27017/DFXDev";
+const MONGOLINK = "mongodb+srv://dfxdynasty:dfxpass@dfx.cas8rnf.mongodb.net/dfx";
 const databaseConnect = async () => {
     console.log('connecting to mongo...')
     await mongoose.connect(MONGOLINK);

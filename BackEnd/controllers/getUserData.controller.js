@@ -1,4 +1,4 @@
-import { getUserService } from "../services/user.service.js"
+import { getUserService } from "../services/graduate.service.js"
 
 export const getUserData = async (req, res) => {
     try {

@@ -1,11 +1,9 @@
 {
   "response": {
     "user_type": "graduate",
-    "name": {
-      "firstname": "Bob",
-      "lastname": "Bagels"
-    },
     "bio": {
+      "firstname": "John",
+      "lastname": "Doe",
       "headshot": "https://ds.static.rtbf.be/article/image/1920x1080/1/5/e/4e5046fc8d6a97d18a5f54beaed54dea-1681747291.jpg",
       "nationality": "British",
       "pronouns": "he/him",
