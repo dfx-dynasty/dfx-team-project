@@ -2,6 +2,8 @@ import mongoose from "mongoose";
 
 
 const bioSchema = new mongoose.Schema({
+    firstname: String,
+    lastname: String,
     headshot: String,
     nationality: String,
     pronouns: String,
@@ -27,10 +29,6 @@ const experienceSchema = new mongoose.Schema({
 
 const graduateSchema = new mongoose.Schema({
     user_type: String,
-    name: {
-        firstname: String,
-        lastname: String
-    },
     bio: bioSchema,
     // experience: [experienceSchema],
 })
