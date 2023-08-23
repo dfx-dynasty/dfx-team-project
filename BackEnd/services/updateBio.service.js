@@ -7,6 +7,7 @@ export const updateBioService = async (bioToUpdate, id) => {
         return await Graduate.findByIdAndUpdate({ _id: bioToUpdate._id.$oid }, updatedBio)
     } catch (e) {
         console.log(e);
+        throw e;
     }
 }
 
