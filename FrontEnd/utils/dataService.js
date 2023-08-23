@@ -13,6 +13,7 @@ export const getUserData = async () => {
 export const putBioDataService = async Bio => {
   try {
     // const updateBio = await axios.put("https://dfx-dynasty.onrender.com/updatebio", Bio);
+    console.log(Bio)
     const updateBio = await axios.put("http://localhost:3001/updatebio", Bio);
     return { Bio: updateBio.data };
   } catch (error) {

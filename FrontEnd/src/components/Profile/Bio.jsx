@@ -72,7 +72,7 @@ const Bio = ({ bioData }) => {
               <p className="p-light align-self-end mb-0">({pronouns})</p>
             </div>
             <i className="fa-solid fa-pen" onClick={handleProfileEditClick} />
-            <BioFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} Bio={bioData} />
+            <BioFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} bio={bioData} />
           </div>
           <p className="p-light">{headline}</p>
           <div id="overview" className="px-4 py-3">
