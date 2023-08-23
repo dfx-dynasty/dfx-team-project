@@ -4,11 +4,6 @@ import { BioFormModal } from "./BioFormModal";
 import "./Bio.css";
 
 const Bio = ({ bioData }) => {
-
-
-
-
-
   const fullName = `${bioData.firstname} ${bioData.lastname}`;
 
   const { socials } = bioData;
@@ -21,10 +16,6 @@ const Bio = ({ bioData }) => {
   const headshot = bioData.headshot;
   const overview = bioData.overview;
   const headline = bioData.headline;
-
-
-
-
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -65,7 +56,7 @@ const Bio = ({ bioData }) => {
             </a>
           </div>
         </div>
-        <div className="bio-details">
+        <div className="bio-details flex-grow-1">
           <div className="d-flex justify-content-between">
             <div className="d-flex align-items-end mb-2">
               <h4 className="font-bold align-self-end me-2 mb-0">{fullName}</h4>
@@ -97,7 +88,7 @@ Bio.propTypes = {
       youtube: PropTypes.string,
       github: PropTypes.string,
       linkedin: PropTypes.string,
-    })
+    }),
   }),
 };
 export default Bio;
