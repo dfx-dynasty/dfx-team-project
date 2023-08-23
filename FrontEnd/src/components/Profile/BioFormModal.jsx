@@ -17,7 +17,7 @@ export const BioFormModal = ({ isOpen, onClose, Bio }) => {
       $oid: "64e492014bf1530e7e87f788"
     },
     user_type: "Graduate",
-    Bio: {
+    bio: {
       firstName: Bio.firstname,
       lastName: "test",
       headshot: Bio.headshot,
