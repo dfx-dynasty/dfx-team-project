@@ -1,56 +1,37 @@
 import { useState } from "react";
 import "./BioFormModal.css";
 import { putBioDataHandler } from "../../../utils/dataHandlers.js";
-// import 
+import BioModel from "../../../utils/Bio.Model.js";
+// import
 
 export const BioFormModal = ({ isOpen, onClose, bio }) => {
   if (!isOpen) return null;
-  //set the default formdata to retrieve current data
 
-  // const { socials } = bio;
-
-  // console.log({ bio });
-
-  const [formData, setFormData] = useState({
-
-    _id: {
-      $oid: "64e492014bf1530e7e87f788"
-    },
-    user_type: "Graduate",
-    bio: {
-      firstName: bio.firstname,
-      lastName: "test",
-      headshot: bio.headshot,
-      nationality: bio.nationality,
-      pronouns: bio.pronouns,
-      headline: bio.headline,
-      overview: bio.overview,
-      socials: {
-        linkedin: bio.socials.linkedin,
-        github: bio.socials.github,
-        youtube: bio.socials.youtube,
-      }
-    }
-
-  });
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-    console.log("here", formData)
-  };
+  const [firstname, setFirstname] = useState(bio.firstname);
+  const [lastname, setLastname] = useState(bio.lastname);
+  const [headshot, setHeadshot] = useState(bio.headshot);
+  const [nationality, setNationality] = useState(bio.nationality);
+  const [pronouns, setPronouns] = useState(bio.pronouns);
+  const [headline, setHeadline] = useState(bio.headline);
+  const [overview, setOverview] = useState(bio.overview);
+  const [linkedinLink, setLinkedin] = useState(bio.socials.linkedin);
+  const [githubLink, setGithub] = useState(bio.socials.github);
+  const [youtubeLink, setYoutube] = useState(bio.socials.youtube);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     onClose();
-    console.log(formData);
-    putBioDataHandler(formData);
-
-
-    // window.location.reload(false);
+    const socials = {
+      youtube: youtubeLink,
+      github: githubLink,
+      linkedin: linkedinLink,
+    };
+    const _id = {
+      $oid: "64e492014bf1530e7e87f788",
+    };
+    const updatedBio = new BioModel(_id, firstname, lastname, headshot, nationality, pronouns, headline, overview, socials);
+    putBioDataHandler(updatedBio);
+    window.location.reload(false);
   };
 
   return (
@@ -71,31 +52,31 @@ export const BioFormModal = ({ isOpen, onClose, bio }) => {
                       <label htmlFor="headshot" className="form-label">
                         Profile Image URL:
                       </label>
-                      <input type="text" id="headshot" name="headshot" value={formData.bio.headshot} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="headshot" name="headshot" placeholder={bio.headshot} onChange={(event) => setHeadshot(event.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
-                      <label htmlFor="headshot" className="form-label">
+                      <label htmlFor="nationality" className="form-label">
                         Nationality Image URL
                       </label>
-                      <input type="text" id="overview" name="overview" value={formData.bio.nationality} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="headshot" name="nationality" placeholder={bio.nationality} onChange={(event) => setNationality(event.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
                       <label htmlFor="linkedin" className="form-label">
                         LinkedIn URL
                       </label>
-                      <input type="text" id="linkedin" name="linkedin" value={formData.bio.socials.linkedin} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="linkedin" name="linkedinLink" placeholder={bio.socials.linkedin} onChange={(event) => setLinkedin(event.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
                       <label htmlFor="github" className="form-label">
                         GitHub URL
                       </label>
-                      <input type="text" id="github" name="github" value={formData.bio.socials.github} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="github" name="githubLink" placeholder={bio.socials.github} onChange={(event) => setGithub(event.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
                       <label htmlFor="youtube" className="form-label">
                         Profile Video URL
                       </label>
-                      <input type="text" id="youtube" name="youtube" value={formData.bio.socials.youtube} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="youtube" name="youtubeLink" placeholder={bio.socials.youtube} onChange={(event) => setYoutube(event.target.value)} className="form-control" />
                     </div>
                   </div>
                   <div>
@@ -103,31 +84,31 @@ export const BioFormModal = ({ isOpen, onClose, bio }) => {
                       <label htmlFor="firstName" className="form-label">
                         First Name*
                       </label>
-                      <input type="text" id="firstName" name="firstName" value={formData.bio.firstName} onChange={handleInputChange} className="form-control" required />
+                      <input type="text" id="firstName" name="firstname" placeholder={bio.firstname} onChange={(event) => setFirstname(event.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
                       <label htmlFor="lastName" className="form-label">
                         Last Name*
                       </label>
-                      <input type="text" id="lastName" name="lastName" value={formData.bio.lastName} onChange={handleInputChange} className="form-control" required />
+                      <input type="text" id="lastName" name="lastname" placeholder={bio.lastname} onChange={(event) => setLastname(event.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
                       <label htmlFor="pronouns" className="form-label">
                         Pronouns
                       </label>
-                      <input type="text" id="pronouns" name="pronouns" value={formData.bio.pronouns} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="pronouns" name="pronouns" placeholder={bio.pronouns} onChange={(event) => setPronouns(event.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
                       <label htmlFor="headline" className="form-label">
                         Profile Headline*
                       </label>
-                      <input type="text" id="headline" name="headline" value={formData.bio.headline} onChange={handleInputChange} className="form-control" required />
+                      <input type="text" id="headline" name="headline" placeholder={bio.headline} onChange={(event) => setHeadline(event.target.value)} className="form-control" />
                     </div>
                     <div className="mb-2">
                       <label htmlFor="overview" className="form-label">
                         overview
                       </label>
-                      <input type="text" id="overview" name="overview" value={formData.bio.overview} onChange={handleInputChange} className="form-control" />
+                      <input type="text" id="overview" name="overview" placeholder={bio.overview} onChange={(event) => setOverview(event.target.value)} className="form-control" />
                     </div>
                   </div>
                 </div>
