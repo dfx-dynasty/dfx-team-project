@@ -28,7 +28,7 @@ const Profile = ({ userData }) => {
             <Bio bioData={bioData} />
           </div>
         </div>
-        <div className="row">
+        {/* <div className="row">
           <div className="col-8">
             <Experience />
             <Training />
@@ -42,7 +42,7 @@ const Profile = ({ userData }) => {
             <Interests />
             <KeyTools />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

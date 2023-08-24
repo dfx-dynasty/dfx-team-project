@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { getData } from "../utils/dataHandlers.js";
 import Profile from "./components/Profile/Profile.jsx";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 const App = ({ }) => {
   const [userData, setUserData] = useState([]);
@@ -28,6 +28,7 @@ const App = ({ }) => {
 
   return (
     <Routes>
+      <Route path="/" element={<Navigate to="/profile" />} />
       <Route path="/profile" element={<Profile userData={userData} />} />
     </Routes>
   );

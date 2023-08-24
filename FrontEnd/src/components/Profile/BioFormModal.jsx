@@ -31,7 +31,7 @@ export const BioFormModal = ({ isOpen, onClose, bio }) => {
     };
     const updatedBio = new BioModel(_id, firstname, lastname, headshot, nationality, pronouns, headline, overview, socials);
     putBioDataHandler(updatedBio);
-    window.location.reload(false);
+    location.reload();
   };
 
   return (
