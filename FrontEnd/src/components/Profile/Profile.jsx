@@ -54,6 +54,7 @@ Profile.defaultProps = {
 
 Profile.propTypes = {
   userData: PropTypes.object,
+  fetchUserData: PropTypes.object,
 };
 
 export default Profile;

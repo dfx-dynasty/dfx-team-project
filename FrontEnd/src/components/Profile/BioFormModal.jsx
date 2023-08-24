@@ -18,6 +18,8 @@ export const BioFormModal = ({ isOpen, onClose, bio }) => {
   const [githubLink, setGithub] = useState(bio.socials.github);
   const [youtubeLink, setYoutube] = useState(bio.socials.youtube);
 
+  const [refresh, setRefresh] = useState("");
+
   const handleSubmit = (event) => {
     event.preventDefault();
     onClose();
@@ -30,11 +32,14 @@ export const BioFormModal = ({ isOpen, onClose, bio }) => {
       $oid: "64e492014bf1530e7e87f788",
     };
     const updatedBio = new BioModel(_id, firstname, lastname, headshot, nationality, pronouns, headline, overview, socials);
-    putBioDataHandler(updatedBio);
-    location.reload();
+
+    updateAndRefreshPage(updatedBio)
   };
 
-
+  const updateAndRefreshPage = async (updatedBio) => {
+    await putBioDataHandler(updatedBio);
+    window.location.reload(false);
+  }
 
   return (
     <div>
