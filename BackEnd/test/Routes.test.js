@@ -2,6 +2,7 @@ import chai from "chai";
 import chaiHttp from "chai-http";
 import { expect } from "chai";
 import server from "../server.js";
+import mongoose from "mongoose";
 
 import Graduate from "../models/graduate.model.js";
 import mockData from "./mockGraduate.js";
@@ -10,7 +11,6 @@ chai.use(chaiHttp);
 
 const testServer = chai.request(server).keepOpen();
 const mockGraduate = mockData.testGraduate;
-const mockErrorGraduate = mockData.testErrorGraduate;
 
 beforeEach(async () => {
     try {
@@ -64,16 +64,27 @@ describe("Routes tests", () => {
 
         // it('should /PUT updateBio error test', async () => {
 
-        //     // const errorMockGraduate = mockGraduate;
-        //     mockErrorGraduate._id = { $oid: "64e492014bf1530e7e87f788" };
-        //     // errorMockGraduate.bio.firstname = null;
+        //     const errorMockGraduate = mockGraduate;
+        //     // errorMockGraduate._id = mongoose.Types.ObjectId("64e492014bf1530e7e87f788");
+        //     errorMockGraduate.bio.firstname = null;
 
         //     const res = await testServer
         //         .put('/updatebio')
-        //         .send(mockErrorGraduate);
+        //         .send(errorMockGraduate);
 
         //     expect(res).to.have.status(500);
 
+        // })
+
+        // it('should /PUT updateBio error test', async () => {
+        //     const mockErrorGraduate = mockGraduate;
+        //     mockErrorGraduate._id = { $oid: "64e492014bf1530e7e87f788" };
+
+        //     const res = await testServer
+        //         .put('/updatebio/noID')
+        //         .send(mockErrorGraduate);
+
+        //     expect(res).to.have.status(404);
         // })
     })
 })
