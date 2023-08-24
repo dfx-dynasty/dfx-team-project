@@ -28,6 +28,7 @@ const App = ({ }) => {
 
   return (
     <Routes>
+      <Route path="/" element={<Profile userData={userData} />} />
       <Route path="/profile" element={<Profile userData={userData} />} />
     </Routes>
   );

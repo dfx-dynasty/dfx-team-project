@@ -11,7 +11,7 @@ import { Interests } from "./Interests.jsx";
 import { KeyTools } from "./KeyTools.jsx";
 import PropTypes from "prop-types";
 
-const Profile = ({ userData }) => {
+const Profile = ({ userData, fetchUserData }) => {
   // Calls Bio, Experience, Feedback, Personality, Extras
   const bioData = userData.bio;
 
@@ -25,7 +25,7 @@ const Profile = ({ userData }) => {
       <div className="m-3">
         <div className="row">
           <div className="col">
-            <Bio bioData={bioData} />
+            <Bio bioData={bioData} fetchUserData={fetchUserData} />
           </div>
         </div>
         <div className="row">
