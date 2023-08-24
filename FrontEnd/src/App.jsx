@@ -4,7 +4,7 @@ import { getData } from "../utils/dataHandlers.js";
 import Profile from "./components/Profile/Profile.jsx";
 import { Route, Routes } from "react-router-dom";
 
-const App = ({}) => {
+const App = ({ }) => {
   const [userData, setUserData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -28,7 +28,6 @@ const App = ({}) => {
 
   return (
     <Routes>
-      {/* <Route path='/' element={<placeholder />} /> */}
       <Route path="/profile" element={<Profile userData={userData} />} />
     </Routes>
   );

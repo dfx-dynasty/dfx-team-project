@@ -2,6 +2,7 @@ import chai from "chai";
 import chaiHttp from "chai-http";
 import { expect } from "chai";
 import server from "../server.js";
+import mongoose from "mongoose";
 
 import Graduate from "../models/graduate.model.js";
 import mockData from "./mockGraduate.js";
@@ -10,7 +11,6 @@ chai.use(chaiHttp);
 
 const testServer = chai.request(server).keepOpen();
 const mockGraduate = mockData.testGraduate;
-const mockErrorGraduate = mockData.testErrorGraduate;
 
 beforeEach(async () => {
     try {
