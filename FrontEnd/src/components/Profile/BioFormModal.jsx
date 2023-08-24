@@ -30,9 +30,14 @@ export const BioFormModal = ({ isOpen, onClose, bio }) => {
       $oid: "64e492014bf1530e7e87f788",
     };
     const updatedBio = new BioModel(_id, firstname, lastname, headshot, nationality, pronouns, headline, overview, socials);
-    putBioDataHandler(updatedBio);
+    updateAndRefreshPage(updatedBio);
     location.reload();
   };
+
+  const updateAndRefreshPage = async (updatedBio) => {
+    await putBioDataHandler(updatedBio);
+    window.location.reload(false);
+  }
 
   return (
     <div>
