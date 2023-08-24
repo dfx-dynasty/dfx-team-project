@@ -28,7 +28,7 @@ const Profile = ({ userData, fetchUserData }) => {
             <Bio bioData={bioData} fetchUserData={fetchUserData} />
           </div>
         </div>
-        {/* <div className="row">
+        <div className="row">
           <div className="col-8">
             <Experience />
             <Training />
@@ -42,7 +42,7 @@ const Profile = ({ userData, fetchUserData }) => {
             <Interests />
             <KeyTools />
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );
