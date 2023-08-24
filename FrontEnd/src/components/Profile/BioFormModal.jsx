@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./BioFormModal.css";
 import { putBioDataHandler } from "../../../utils/dataHandlers.js";
 import BioModel from "../../../utils/Bio.Model.js";
-// import
 
 export const BioFormModal = ({ isOpen, onClose, bio }) => {
   if (!isOpen) return null;
@@ -31,7 +30,6 @@ export const BioFormModal = ({ isOpen, onClose, bio }) => {
     };
     const updatedBio = new BioModel(_id, firstname, lastname, headshot, nationality, pronouns, headline, overview, socials);
     updateAndRefreshPage(updatedBio);
-    location.reload();
   };
 
   const updateAndRefreshPage = async (updatedBio) => {
