@@ -4,9 +4,15 @@ export const updateBioService = async (bioToUpdate, id) => {
     const updatedBio = { ...bioToUpdate };
     delete updatedBio._id;
     try {
-        return await Graduate.findByIdAndUpdate({ _id: bioToUpdate._id.$oid }, updatedBio)
+        const updateAttempt = await Graduate.findByIdAndUpdate({ _id: bioToUpdate._id.$oid }, updatedBio);
+        if (!updateAttempt) {
+            console.log("here error")
+            throw new Error("error updating")
+
+        }
+        console.log("here success")
+        return updateAttempt;
     } catch (e) {
-        console.log(e);
         throw e;
     }
 }
