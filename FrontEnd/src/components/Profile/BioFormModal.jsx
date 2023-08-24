@@ -18,7 +18,7 @@ export const BioFormModal = ({ isOpen, onClose, bio }) => {
   const [githubLink, setGithub] = useState(bio.socials.github);
   const [youtubeLink, setYoutube] = useState(bio.socials.youtube);
 
-  const [refresh, setRefresh] = useState("");
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
