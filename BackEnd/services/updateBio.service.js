@@ -2,7 +2,7 @@ import Graduate from "../models/graduate.model.js"
 
 export const updateBioService = async (bioToUpdate, id) => {
     const updatedBio = { ...bioToUpdate };
-    // delete updatedBio._id;
+    delete updatedBio._id;
     try {
         const updateAttempt = await Graduate.findByIdAndUpdate({ _id: bioToUpdate._id.$oid }, updatedBio);
         if (!updateAttempt) {
