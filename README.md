@@ -1,9 +1,9 @@
 # dfx-team-project
 Collaborators include: Aimable, Alex A, Andreea, Habeeb, Liam, Livvy
 
-###  VISIT THE CHITTER APP LIVE HERE AND MAKE SOME PEEPS!:
+###  VISIT THE DFX CLONE APP LIVE HERE:
 
->> (https://mardel-chitter.netlify.app/)
+>> (https://dfx-clone.netlify.app/)
 >> 
 >> --> Fetching the data might take a minute to load when visiting the app as the service hosting the server needs some time to boot up after a period of inactivity.
 
